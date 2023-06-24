@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container main">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3 left">
+          <div class="nkari"></div>
+          <div class="cont">
+            <div class="stepOne">
+              <div class="tviA" id="st1">
+                <h4>1</h4>
+              </div>
+              <div class="txt">
+                <p>STEP 1</p>
+                <h5>YOUR INFO</h5>
+              </div>
+            </div>
+            <div class="stepOne">
+              <div class="tvi" id="st2">
+                <h4>2</h4>
+              </div>
+              <div class="txt">
+                <p>STEP 2</p>
+                <h5>SELECT PLAN</h5>
+              </div>
+            </div>
+            <div class="stepOne">
+              <div class="tvi" id="st3">
+                <h4>3</h4>
+              </div>
+              <div class="txt">
+                <p>STEP 3</p>
+                <h5>ADD-ONS</h5>
+              </div>
+            </div>
+            <div class="stepOne">
+              <div class="tvi" id="st4">
+                <h4>4</h4>
+              </div>
+              <div class="txt">
+                <p>STEP 4</p>
+                <h5>SUMMARY</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 pageOne" id="arajin">
+          <h1>Personal info</h1>
+          <p>Please provide your name,email adress, and phone number</p>
+          <form action="">
+            <p>Name</p>
+            <input type="text" placeholder="e.g. Stephen King" id="name" />
+            <p>Email Adress</p>
+            <input type="email" placeholder="e.g. stephenking@lorem.com" />
+            <p>Phone Number</p>
+            <input type="tel" placeholder="e.g. +1 234 567 890" />
+          </form>
+          <button id="butn">Next Step</button>
+        </div>
+        <div class="col-md-5 pageTwo" id="erkrord">
+          <h1>Select Your Plan</h1>
+          <p>You Have The option of monthly or yearly billing.</p>
+          <div class="sel">
+            <div class="arc" id="arc1" onclick="selc(this), a1()">
+              <img
+                src="images/icon-arcade.svg"
+                alt=""
+                width="50px"
+                height="40px"
+              />
+              <h4>Arcade</h4>
+              <p id="arcp">9$/mo</p>
+            </div>
+            <div class="arc" onclick="selc(this), a2()">
+              <img
+                src="images/icon-advanced.svg"
+                alt=""
+                width="40px"
+                height="40px"
+              />
+              <h4>Advanced</h4>
+              <p id="advp">12$/mo</p>
+            </div>
+            <div class="arc" onclick="selc(this), a3()">
+              <img
+                src="images/icon-pro.svg"
+                alt=""
+                width="40px"
+                height="40px"
+              />
+              <h4>Pro</h4>
+              <p id="prop">15$/mo</p>
+            </div>
+          </div>
+          <div class="ym">
+            <span>Monthly</span>
+            <div class="ajdzax"></div>
+
+            <span>Yearly</span>
+          </div>
+
+          <div class="arajhet">
+            <button id="het">Go Back</button>
+            <button id="araj">Next Step</button>
+          </div>
+        </div>
+        <div class="col-md-5 pageThree" id="errord">
+          <h1>Pick add-ons</h1>
+          <p>Add-ons help enhance your gaming experience</p>
+          <div class="yntr">
+            <label for="ch">
+              <div
+                class="fir"
+                onmouseover="firHov(this)"
+                onmouseleave="exit()"
+                onmousedown="nshv()"
+              >
+                <input type="checkbox" name="" id="ch" />
+                <div class="chkb">
+                  <h4>Online services</h4>
+                  <p>Access to multiplayer games</p>
+                </div>
+                <span id="sp">+$1/mo</span>
+              </div>
+            </label>
+            <label for="ch1">
+              <div
+                class="fir"
+                onmouseover="firHov(this)"
+                onmouseleave="exit()"
+                onmousedown="nshv1()"
+              >
+                <input type="checkbox" name="" id="ch1" />
+                <div class="chkb">
+                  <h4>Larger storage</h4>
+                  <p>Extra 1TB of cloud save</p>
+                </div>
+                <span id="sp1">+$2/mo</span>
+              </div>
+            </label>
+            <label for="ch2">
+              <div
+                class="fir"
+                onmouseover="firHov(this)"
+                onmouseleave="exit()"
+                onmousedown="nshv2()"
+              >
+                <input type="checkbox" name="" id="ch2" />
+                <div class="chkb">
+                  <h4>Customizable profile</h4>
+                  <p>Custom theme on your profile</p>
+                </div>
+                <span id="sp2">+$2/mo</span>
+              </div>
+            </label>
+          </div>
+          <div class="arajhet1">
+            <button id="het1">Go Back</button>
+            <button id="araj1">Next Step</button>
+          </div>
+        </div>
+        <div class="col-md-5 finish" id="verjin">
+          <h1>Finishing up</h1>
+          <p class="forp">
+            Double-check everything looks OK before confirming.
+          </p>
+          <div class="bgov">
+            <div class="tp">
+              <div class="ltxt">
+                <h4 id="vtesak">Arcade (Monthly)</h4>
+                <a href="">Change</a>
+              </div>
+              <div class="pric">
+                <h4 id="vtespric">$9/mo</h4>
+              </div>
+            </div>
+            <div class="bt">
+              <div class="ltxt">
+                <p id="dop1">Online service</p>
+                <p id="dop2">Larger storage</p>
+                <p id="dop3"></p>
+              </div>
+              <div class="pric">
+                <h5 id="doppr1">+$1/mo</h5>
+                <h5 id="doppr2">+$2/mo</h5>
+                <h5 id="doppr3"></h5>
+              </div>
+            </div>
+          </div>
+          <div class="total">
+            <p>Total (per month)</p>
+            <h3 id="tot">+12/mo</h3>
+          </div>
+          <div class="arajhet2">
+            <button id="het2" onclick="back2()">Go Back</button>
+            <button id="araj2" onclick="fsyo()">Confirm</button>
+          </div>
+        </div>
+        <div class="col-md-5" id="conf">
+          <img src="images/conf.png" alt="" width="200px" height="200px" />
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
